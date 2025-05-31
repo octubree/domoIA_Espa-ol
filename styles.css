@@ -1,0 +1,222 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del título principal */
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 150px; /* Margen de 150px entre título y video */
+    padding-top: 30px;
+    color: #333;
+}
+
+/* Estilos del contenedor de video */
+.video-container {
+    position: relative;
+    width: 70%; /* El video ocupa el 70% de la portada */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#main-video {
+    width: 100%;
+    display: block;
+}
+
+/* Estilos del botón de play */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button svg {
+    color: white;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Estilos del texto secundario con enlace */
+.secondary-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.embedded-link {
+    color: #0066cc;
+    text-decoration: none;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.embedded-link:hover {
+    color: #004499;
+    border-bottom-color: #004499;
+}
+
+/* Estilos de la sección de lista */
+.list-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.list-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.bullet-list {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.bullet-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.bullet-list li::before {
+    content: "•";
+    color: #0066cc;
+    font-weight: bold;
+    display: inline-block;
+    width: 15px;
+    margin-left: -15px;
+}
+
+/* Nuevos estilos para los botones de compartir y sus íconos */
+.share-buttons {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.share-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex; /* Permite que el ícono y el texto estén en línea */
+    align-items: center; /* Centra verticalmente el ícono y el texto */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 16px;
+    color: #333; /* Color de texto predeterminado */
+    text-decoration: none; /* Asegura que no haya subrayado si decides usar <a> */
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+.share-button:hover {
+    opacity: 0.9; /* Efecto de opacidad al pasar el ratón */
+}
+
+/* ESTILO CLAVE PARA LOS ÍCONOS */
+.social-icon {
+    width: 24px;   /* Define el ancho fijo del ícono */
+    height: 24px;  /* Define la altura fija del ícono */
+    object-fit: contain; /* Ajusta la imagen dentro de las dimensiones, sin recortar */
+    flex-shrink: 0; /* Evita que el ícono se encoja si el botón tiene poco espacio */
+}
+
+/* Colores específicos para cada botón */
+.reddit-share { 
+    background-color: #FF4500; 
+    color: white; 
+    border-color: #FF4500; 
+}
+.twitter-share { 
+    background-color: #1DA1F2; 
+    color: white; 
+    border-color: #1DA1F2; 
+}
+.copy-link-share { 
+    background-color: #4CAF50; 
+    color: white; 
+    border-color: #4CAF50; 
+}
+
+/* Efectos hover para colores específicos (opcional) */
+.reddit-share:hover { background-color: #e03c00; }
+.twitter-share:hover { background-color: #1a8cd8; }
+.copy-link-share:hover { background-color: #45a049; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+        margin-bottom: 100px;
+    }
+    
+    .video-container {
+        width: 90%;
+    }
+    
+    .secondary-title {
+        font-size: 1.5rem;
+    }
+    
+    .list-section {
+        width: 95%;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .share-button {
+        font-size: 14px; /* Ajusta el tamaño de fuente en móviles */
+        padding: 8px 12px;
+    }
+
+    .social-icon {
+        width: 20px; /* Ajusta el tamaño del ícono en móviles */
+        height: 20px;
+    }
+}
